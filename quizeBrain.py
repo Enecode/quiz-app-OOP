@@ -18,10 +18,14 @@ class QuizBrain:
         """
         ::param user_answer: check for user answer
         ::param correct_answer: check correct answer
-        ::returns the answer either right or wrong and show the correct answer afterwards
+        ::returns the answer either right or wrong and show the correct answer, the current score and number of question
         """
         if user_answer.lower() == correct_answer.lower():
+            self.score += 1
             print("You got it right!")
+
         else:
             print("That's wrong")
         print(f"The correct answer was: {correct_answer}.")
+        print(f"Your current score is: {self.score}/{self.question_number}")
+        print("\n")
